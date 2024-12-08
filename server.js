@@ -3,6 +3,8 @@ const app = express();
 const path = require('path')
 const PORT = process.env.PORT || 3500;
 
+app.use(express.json())
+
 // PUBLIC FILES FOR ACCESS
 app.use('/', express.static(path.join(__dirname, 'public')))
 
